@@ -1,6 +1,8 @@
 package com.appdevforall.sequendo
 
 import android.content.Context
+import android.content.pm.ActivityInfo
+import android.graphics.drawable.GradientDrawable.Orientation
 import android.hardware.display.DisplayManager
 import android.os.Bundle
 import android.view.Display
@@ -15,8 +17,8 @@ class MainActivity : AppCompatActivity()  {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
+        setContentView(R.layout.activity_secondary_screen)
 
         val displayManager = getSystemService(Context.DISPLAY_SERVICE) as DisplayManager
         val displays = displayManager.displays
